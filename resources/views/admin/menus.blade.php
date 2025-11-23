@@ -1,3 +1,4 @@
+@extends('admin.layouts')
 <h1>Daftar Menu</h1>
 <a href="{{ route('admin.menus.create') }}" class="btn-add">+ Tambah Menu</a>
 
