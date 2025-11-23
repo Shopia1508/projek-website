@@ -161,11 +161,11 @@
     <!-- SIDEBAR -->
     <div class="sidebar">
         <div class="logo">☕ Cafe Admin</div>
-        <a href="{{ route('admin.index')}}" class="menu-item active"><i>🏠</i> Dashboard</a>
-        <a href="{{ route('admin.index') }}" class="menu-item"><i>📋</i> Menus</a>
-        <a href="/admin/orders" class="menu-item"><i>🧾</i> Orders</a>
-        <a href="/admin/users" class="menu-item"><i>👥</i> Users</a>
-        <a href="/admin/settings" class="menu-item"><i>⚙️</i> Settings</a>
+        <a href="{{ route('admin.index')}}" class="menu-item active"><i></i> Home Admin</a>
+        <a href="{{ route('admin.menus') }}" class="menu-item"><i></i> Menus</a>
+        <a href="/admin/orders" class="menu-item"><i></i> Blog</a>
+        <a href="/admin/users" class="menu-item"><i></i>Category</a>
+        <a href="/admin/settings" class="menu-item"><i></i> Settings</a>
 
 
         <div class="menu-item" style="margin-top:60px;"><i>⏻</i> Logout</div>
@@ -174,7 +174,7 @@
     <!-- MAIN CONTENT -->
     <div class="main">
 
-        <div class="header">Welcome Back, Admin! 🥐</div>
+        <div class="header">Welcome Back, Admin! </div>
 
         <!-- TOP CARDS -->
         <div class="cards">
@@ -199,44 +199,8 @@
         <!-- CONTENT GRID -->
         <div class="content-grid">
 
-            <!-- Sales (dummy) -->
-            <div class="sales">
-                <h3>Sales Overview</h3>
-                <p style="color:#888;">(chart placeholder)</p>
-            </div>
 
-            <!-- RECENT ORDERS -->
-            <div class="recent-orders">
-                <h3>Recent Orders</h3>
-
-                <table>
-                    <tr>
-                        <th>Order ID</th>
-                        <th>Item</th>
-                        <th>Customer</th>
-                        <th>Status</th>
-                    </tr>
-                    <tr>
-                        <td>12046</td>
-                        <td>Carfully</td>
-                        <td>Alex</td>
-                        <td>Completed</td>
-                    </tr>
-                    <tr>
-                        <td>12045</td>
-                        <td>Caramel Latte</td>
-                        <td>Jenny</td>
-                        <td>Completed</td>
-                    </tr>
-                    <tr>
-                        <td>12044</td>
-                        <td>Beef Lasagna</td>
-                        <td>Maria</td>
-                        <td>Cash</td>
-                    </tr>
-                </table>
-            </div>
-
+          
         </div>
 
         <!-- BESTSELLER SECTION -->
