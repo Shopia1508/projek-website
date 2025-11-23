@@ -19,7 +19,7 @@
 
     <section class="login-section"> 
     <div class="login-wrapper">
-        <form action="/admin/index" method="POST">
+        <form action="/admin/index" method="GET">
             <h1>Login Admin</h1>
             @csrf
             <div class="input-box">

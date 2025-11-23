@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ControllerOrder;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\MenuController; // <-- WAJIB DITAMBAH
+use App\Http\Controllers\MenuController;
 use App\Models\Menus;
 use Illuminate\Support\Facades\Route;
 

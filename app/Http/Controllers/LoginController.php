@@ -26,7 +26,7 @@ class LoginController extends Controller
 
         session(['admin_logged_in' => true]);
 
-        return redirect('/admin/index');
+        return redirect('admin.index');
     }
 
    
