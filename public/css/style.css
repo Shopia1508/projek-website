@@ -1336,3 +1336,56 @@ body {
 .login-wrapper .btn:hover{
   transform: scale(1.05);
 }
+
+@media screen and (max-width: 992px) {
+  .login-wrapper {
+    width: 70%;
+    padding: 25px 30px;
+  }
+  .login-wrapper h1 {
+    font-size: 30px;
+  }
+  .input-box input {
+    width: 85%;
+    font-size: 14px;
+    height: 45px;
+  }
+  .login-wrapper .btn {
+    height: 42px;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .login-section {
+    padding: 20px;
+  }
+
+  .login-wrapper {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .login-wrapper h1 {
+    font-size: 28px;
+  }
+
+  .input-box {
+    margin: 15px 0;
+  }
+
+  .input-box input {
+    width: 80%;
+    padding: 0 45px 0 15px;
+    font-size: 14px;
+  }
+
+  .input-box i {
+    right: 15px;
+    font-size: 18px;
+  }
+
+  .login-wrapper .btn {
+    height: 40px;
+    font-size: 14px;
+  }
+}

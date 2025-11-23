@@ -1,0 +1,130 @@
+body {
+ margin: 0;
+ padding: 0;
+ font-family: 'Poppins', sans-serif;
+ background: #FAF6F2;
+ display: flex;
+ height: 100vh;
+}
+
+        
+.sidebar {
+ width: 240px;
+ background: linear-gradient(180deg, #F2E8DC, #F7EFE6);
+ padding: 30px 20px;
+ box-sizing: border-box;
+}
+
+.sidebar .logo {
+ font-size: 24px;
+ font-weight: bold;
+ margin-bottom: 40px;
+}
+
+.menu-item {
+ display: flex;
+ align-items: center;
+ padding: 12px 15px;
+ border-radius: 10px;
+ cursor: pointer;
+ margin-bottom: 12px;
+ transition: 0.2s;
+}
+
+.menu-item:hover,
+.menu-item.active {
+ background: #ffffff;
+ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item i {
+ margin-right: 12px;
+}
+
+        
+.main {
+ flex: 1;
+ padding: 40px;
+}
+
+.header {
+ font-size: 26px;
+ font-weight: bold;
+ margin-bottom: 25px;
+}
+
+        
+.top-section {
+ display: flex;
+ gap: 20px;
+ align-items: stretch;
+margin-bottom: 30px;
+ flex-wrap: wrap;
+}
+
+.welcome-box {
+ flex: 1; 
+ background: linear-gradient(135deg, #c69b64, #8b5a2b);
+ color: white;
+ padding: 25px;
+ border-radius: 12px;
+ font-weight: bold;
+ box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+ height: 150px;
+ flex: 1 1 300px;
+}
+
+
+#calendar {
+ opacity: 0;
+ position: absolute;
+ pointer-events: none;
+}
+
+.calendar-box {
+ position: relative;
+ overflow: hidden;
+}
+
+.calendar-box .flatpickr-calendar {
+ width: 100% !important; 
+ height: auto;
+ border: none !important;
+ box-shadow: none !important;
+}
+
+.flatpickr-calendar {
+ background: #FFF6E8 !important;
+ border-radius: 12px !important;
+ font-family: 'Poppins', sans-serif !important;
+ box-shadow: 0 6px 18px rgba(0,0,0,0.15) !important;
+}
+
+.flatpickr-months .flatpickr-month {
+ background: #C49A6C !important;
+ color: white !important;
+ border-radius: 10px !important;
+}
+
+.flatpickr-weekday {
+ color: #8B5A2B !important;
+ font-weight: bold;
+}
+
+.flatpickr-day {
+ border-radius: 8px !important;
+ transition: 0.2s;
+}
+
+.flatpickr-day:hover {
+ background: #F0D9B5 !important;
+ color: #5A3A1C !important;
+}
+
+.flatpickr-day.selected {
+ background: #C49A6C !important;
+ color: white !important;
+}
+
+
+ 

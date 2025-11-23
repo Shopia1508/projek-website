@@ -1,4 +1,5 @@
 @extends('admin.layouts')
+@section('content')
 <h1>Daftar Menu</h1>
 <a href="{{ route('admin.menus.create') }}" class="btn-add">+ Tambah Menu</a>
 
@@ -53,3 +54,4 @@
     .btn-edit { background: #2196F3; color: white; padding: 4px 8px; text-decoration: none; border-radius: 4px; }
     .btn-delete { background: #f44336; color: white; border: none; padding: 4px 8px; border-radius: 4px; cursor: pointer; }
 </style>
+@endsection
