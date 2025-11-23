@@ -24,23 +24,23 @@
     </section>
 
     <section class="content-section">
+    <div class="content-container">
         <div class="content-left">
             <img src="{{ asset('images/coffeshop.jpg') }}" class="content-img" alt="Coffeeshop">
         </div>
-        <div class="content-container">
-            <div class="content-right">
-                <p>
-                    Café ini berdiri di Bogor sebagai ruang nyaman bagi siapa pun yang ingin rehat sejenak dari rutinitas.
-                    Di sini, pengunjung dapat menikmati kopi hangat, suasana tenang, dan momen kecil yang membuat pikiran
-                    terasa lebih lega. Setiap sudut café dirancang untuk memberi rasa teduh—baik untuk bekerja, berbincang,
-                    atau sekadar meluangkan waktu untuk diri sendiri. Dengan aroma kopi, musik lembut, dan pelayanan ramah,
-                    café ini berusaha membuat hari siapa pun terasa lebih ringan.
 
-                </p>
-            </div>
+        <div class="content-right">
+            <p>
+                Café ini berdiri di Bogor sebagai ruang nyaman bagi siapa pun yang ingin rehat sejenak dari rutinitas.
+                Di sini, pengunjung dapat menikmati kopi hangat, suasana tenang, dan momen kecil yang membuat pikiran
+                terasa lebih lega. Setiap sudut café dirancang untuk memberi rasa teduh—baik untuk bekerja, berbincang,
+                atau sekadar meluangkan waktu untuk diri sendiri. Dengan aroma kopi, musik lembut, dan pelayanan ramah,
+                café ini berusaha membuat hari siapa pun terasa lebih ringan.
+            </p>
         </div>
+    </div>
+</section>
 
-    </section>
 
     {{-- Categories --}}
     <section class="categories-section">
