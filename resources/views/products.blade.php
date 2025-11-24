@@ -46,7 +46,7 @@ function showProducts(data) {
   data.forEach(product => {
   container.innerHTML += `
     <div class="products-card fade-in">
-      <img src="/storage/${product.image}" alt="${product.name}">
+      <img src="/images/${product.image}" alt="${product.name}">
       <h4>${product.name}</h4>
       <p>${product.description}</p>
       <div class="price-add">
