@@ -5,6 +5,8 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MenuController;
 use App\Models\Menus;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\BlogController;
+use App\Models\blog;
 
 Route::get('/', function () {
     return view('home');
@@ -46,8 +48,19 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/menus/{id}/edit', [MenuController::class, 'edit'])->name('menus.edit');
     Route::post('/menus/{id}/update', [MenuController::class, 'update'])->name('menus.update');
     Route::delete('/menus/{id}', [MenuController::class, 'destroy'])->name('menus.destroy');
+});
+
+//Blog
+
+Route::prefix('admin')->name('admin.')->group(function () {
+
+    Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+    Route::get('/blog/create', [BlogController::class, 'create'])->name('blog.create');
+    Route::post('/blog/store', [BlogController::class, 'store'])->name('blog.store');
+    Route::get('/blog/{id}/edit', [BlogController::class, 'edit'])->name('blog.edit');
+    Route::post('/blog/{id}/update', [BlogController::class, 'update'])->name('blog.update');
+    Route::delete('/blog/{id}', [BlogController::class, 'destroy'])->name('blog.destroy');
 
 });
 
-//TAMBAH DATA CREATE
 

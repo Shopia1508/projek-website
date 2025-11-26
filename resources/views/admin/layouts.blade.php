@@ -19,8 +19,8 @@
         <div class="logo">Coffeé.</div>
         <a href="{{ route('admin.index')}}" class="menu-item "><i class="fa-solid fa-house-chimney-user"></i> Home Admin</a>
         <a href="{{ route('admin.menus') }}" class="menu-item"><i class="fa-solid fa-utensils"></i> Menus</a>
-        <a href="/admin/orders" class="menu-item"><i class="fa-regular fa-envelope"></i> Blog</a>
-        <a href="/admin/users" class="menu-item"><i class="fa-solid fa-tags"></i> Category</a>
+        <a href="{{route('admin.blog.index')}}" class="menu-item"><i class="fa-regular fa-envelope"></i> Blog</a>
+        <a href="/admin/us'aders" class="menu-item"><i class="fa-solid fa-tags"></i> Category</a>
         <a href="/admin/settings" class="menu-item"><i class="fa-solid fa-gear"></i> Settings</a>
 
 
