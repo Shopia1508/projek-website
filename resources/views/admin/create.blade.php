@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="{{ asset('css/admin.css') }}">
 <form action="{{ route('admin.menus.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
 
