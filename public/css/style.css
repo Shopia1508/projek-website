@@ -1195,6 +1195,146 @@ body {
   background-color: #deb22f;
 }
 
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("../images/bglogin.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.login-wrapper {
+  width: 420px;
+  border-radius: 10px;
+  padding: 30px 40px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+.login-wrapper h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.input-box {
+  width: 100%;
+  margin: 20px 0;
+  position: relative;
+}
+
+.input-box input {
+  width: 80%;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 40px;
+  outline: none;
+  font-size: 15px;
+  padding: 0 50px 0 20px;
+  color: #fff;
+  transition: .3s;
+}
+
+.input-box:focus {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.input-box input::placeholder {
+  color: #fff;
+}
+
+.input-box i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.login-wrapper .btn {
+  width: 100%;
+  height: 45px;
+  background-color: #fff;
+  border: none;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: .25s;
+}
+
+.login-wrapper .btn:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 992px) {
+  .login-wrapper {
+    width: 70%;
+    padding: 25px 30px;
+  }
+
+  .login-wrapper h1 {
+    font-size: 30px;
+  }
+
+  .input-box input {
+    width: 85%;
+    font-size: 14px;
+    height: 45px;
+  }
+
+  .login-wrapper .btn {
+    height: 42px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .login-section {
+    padding: 20px;
+  }
+
+  .login-wrapper {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .login-wrapper h1 {
+    font-size: 28px;
+  }
+
+  .input-box {
+    margin: 15px 0;
+  }
+
+  .input-box input {
+    width: 80%;
+    padding: 0 45px 0 15px;
+    font-size: 14px;
+  }
+
+  .input-box i {
+    right: 15px;
+    font-size: 18px;
+  }
+
+  .login-wrapper .btn {
+    height: 40px;
+    font-size: 14px;
+  }
+}
 .footer {
   background: #74512D;
   color: #fffdf7;
