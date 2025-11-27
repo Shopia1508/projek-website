@@ -357,3 +357,70 @@ body {
     -webkit-appearance: none;
     margin: 0;
 }
+
+.tittle-daftar {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+.btn-add {
+    background: linear-gradient(135deg, #c69b64, #8b5a2b);
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+
+.alert-success,
+.allert-succes {
+    background: #DFF2BF;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+
+.menu-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 50px;
+}
+
+.menu-table th,
+.menu-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.menu-table th {
+    background-color: #ffefd5; 
+}
+
+
+.blog-image {
+    width: 60px;
+    height: auto;
+    border-radius: 4px;
+}
+
+
+.btn-edit {
+    background: #2196F3;
+    color: white;
+    padding: 4px 8px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+
+.btn-delete {
+    background: #f44336;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
