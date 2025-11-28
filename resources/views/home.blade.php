@@ -145,48 +145,16 @@
     {{-- Latest Blog --}}
     <section class="blog-section">
         <h1 class="blog-title">Latest Blog</h1>
-        <div class="blog-container" onclick= "openPopup()">
-            <div class="blog-card">
-                <img src="{{ asset('images/coffee2.jpg') }}">
-                <div class="blog-content">
-                    <p>
-                        Kopi selalu punya cerita di setiap
-                        cangkirnya. Bukan hanya soal rasa, tapi
-                        tentang momen kecil yang tercipta saat kita menikmatinya.
-                        Banyak orang menjadikan kopi sebagai awal hari, tempat singgah di tengah kesibukan,
-                        atau teman tenang di sore yang panjang.</p>
-                </div>
-            </div>
-            <div class="blog-card">
-                <img src="{{ asset('images/people.jpg') }}">
-                <div class="blog-content">
-                    <p>
-                        Ada satu hal yang membuat café ini berbeda dari yang lain: suasananya tidak pernah benar-benar sepi.
-                        Hampir setiap bulan, café ini selalu mengadakan event di depan tokonya.
-                        Semua acara itu membuat café terasa hidup dan penuh energi positif.</p>
-                </div>
-            </div>
-            <div class="blog-card">
-                <img src="{{ asset('images/interior.jpg') }}">
-                <div class="blog-content">
-                    <p>
-                        Interior café ini dirancang dengan nuansa hangat dan minimalis. Warna-warna earthy, lampu warm
-                        membuat suasana
-                        terasa nyaman sejak pertama masuk. meja dan sofa ditata rapi untuk kebutuhan kerja maupun santai.
-                        Sederhana, estetik, dan bikin siapa pun betah berlama-lama.</p>
-                </div>
+       <div class="blog-container">
+    @foreach ($blogs as $blog)
+        <div class="blog-card" onclick="openPopup({{ $blog->id }})">
+            <img src="{{ asset('storage/' . $blog->image) }}">
+            <div class="blog-content">
+                <p>{{ $blog->content }}</p>
             </div>
         </div>
-
-        <script>
-            function openPopup() {
-                document.getElementById("popup").style.display = "flex";
-            }
-
-            function closePopup() {
-                document.getElementById("popup").style.display = "none";
-            }
-        </script>
+    @endforeach
+</div>
 
         <section class="gallery-section">
             <h1 class="gallery-title">Gallery</h1>

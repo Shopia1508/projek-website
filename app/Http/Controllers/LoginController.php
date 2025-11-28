@@ -16,18 +16,17 @@ class LoginController extends Controller
 
  
     public function adminLogin(Request $request)
-    {
-        $admin = Admin::where('email', $request->email)->first();
+{
+    $admin = Admin::where('email', $request->email)->first();
 
-        if (!$admin || !Hash::check($request->password, $admin->password)) {
-            return back()->withErrors(['msg' => 'Email atau Password salah']);
-        }
-
-
-        session(['admin_logged_in' => true]);
-
-        return redirect('admin.index');
+    if (!$admin || !Hash::check($request->password, $admin->password)) {
+        return back()->withErrors(['msg' => 'Email atau Password salah']);
     }
+
+    session(['admin_logged_in' => true]);
+
+    return redirect()->route('admin.index');
+}
 
    
 }

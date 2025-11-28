@@ -8,15 +8,14 @@ use Symfony\Component\HttpFoundation\Response;
 
 class IsAdmin
 {
-    
-    public function handle(Request $request, Closure $next): Response
+
+    public function handle($request, Closure $next)
     {
-        
-        if (!session()->has('admin_logged_in')) {
-            return redirect('/admin/dashboard');
+        if (!session('admin_logged_in')) {
+            return redirect()->route('admin.dashboard')->withErrors(['msg'=> 'silahkan login terlebih dahulu!']);
         }
 
         return $next($request);
     }
-    
+
 }

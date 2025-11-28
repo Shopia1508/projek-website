@@ -1,17 +1,16 @@
 <?php
 
 use App\Http\Controllers\ControllerOrder;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MenuController;
 use App\Models\Menus;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\BlogController;
 use App\Models\blog;
+use App\Http\Controllers\Admin\BlogController as AdminBlog;
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
 
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/products', function () {
     $menus = Menus::all();
@@ -34,6 +33,14 @@ Route::post('/order/create-form-cart', [ControllerOrder::class, 'createFormCart'
 // ADMIN LOGIN
 Route::get('/admin-login', [LoginController::class, 'showAdminLogin'])->name('admin.login');
 Route::post('/admin-login', [LoginController::class, 'adminLogin'])->name('admin.login.submit');
+
+//auth
+Route::middleware('admin_auth')->prefix('admin')->name('admin.')->group(function () {
+
+    Route::get('/index', function () {
+        return view('admin.index');
+    })->name('index');
+});
 
 // ADMIN DASHBOARD
 Route::get('/admin/index', function () {
@@ -62,5 +69,6 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::delete('/blog/{id}', [BlogController::class, 'destroy'])->name('blog.destroy');
 
 });
+
 
 

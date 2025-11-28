@@ -19,25 +19,26 @@
 
     <section class="login-section"> 
     <div class="login-wrapper">
-        <form action="/admin/index" method="GET">
-            <h1>Login Admin</h1>
-            @csrf
-            <div class="input-box">
-                <input type="email" name="email" placeholder="Email" required>
-                <i class="bi bi-person-fill"></i>
-            </div>
-            <div class="input-box">
-                <input type="password" name="password" placeholder="Password" required>
-                <i class="bi bi-key"></i>
-            </div>
+       <form action="{{ route('admin.login.submit') }}" method="POST">
+    @csrf
+    <h1>Login Admin</h1>
 
-            <button type="submit" class="btn">Login</button>
-            @if ($errors->any())
-            <p style="color:rgb(255, 250, 233)">{{ $errors->first() }}</p>
-        @endif
+    <div class="input-box">
+        <input type="email" name="email" placeholder="Email" required>
+        <i class="bi bi-person-fill"></i>
+    </div>
 
+    <div class="input-box">
+        <input type="password" name="password" placeholder="Password" required>
+        <i class="bi bi-key"></i>
+    </div>
 
-        </form>
+    <button type="submit" class="btn">Login</button>
+
+    @if ($errors->any())
+        <p style="color:rgb(255, 250, 233)">{{ $errors->first() }}</p>
+    @endif
+</form>
     </div>
 </section>
 </body>
