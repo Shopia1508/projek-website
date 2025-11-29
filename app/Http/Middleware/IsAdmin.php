@@ -3,19 +3,17 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\Facades\Auth;
 
 class IsAdmin
 {
-
     public function handle($request, Closure $next)
     {
-        if (!session('admin_logged_in')) {
-            return redirect()->route('admin.dashboard')->withErrors(['msg'=> 'silahkan login terlebih dahulu!']);
+        if (!Auth::guard('admin')->check()) {
+            return redirect()->route('admin.login')
+                ->withErrors(['msg'=> 'silahkan login terlebih dahulu!']);
         }
 
         return $next($request);
     }
-
 }

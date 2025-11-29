@@ -4,6 +4,7 @@ use App\Http\Controllers\ControllerOrder;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MenuController;
+use App\Http\Middleware\IsAdmin;
 use App\Models\Menus;
 use Illuminate\Support\Facades\Route;
 use App\Models\blog;
@@ -33,19 +34,19 @@ Route::post('/order/create-form-cart', [ControllerOrder::class, 'createFormCart'
 // ADMIN LOGIN
 Route::get('/admin-login', [LoginController::class, 'showAdminLogin'])->name('admin.login');
 Route::post('/admin-login', [LoginController::class, 'adminLogin'])->name('admin.login.submit');
+Route::get('/admin-logout', [LoginController::class, 'adminLogout'])->name('admin.logout');
 
 //auth
-Route::middleware('admin_auth')->prefix('admin')->name('admin.')->group(function () {
+Route::middleware(IsAdmin::class)
+    ->prefix('admin')
+    ->name('admin.')
+    ->group(function () {
 
-    Route::get('/index', function () {
-        return view('admin.index');
-    })->name('index');
-});
+        Route::get('/index', function () {
+            return view('admin.index');
+        })->name('index');
 
-// ADMIN DASHBOARD
-Route::get('/admin/index', function () {
-    return view('admin.index');
-})->name('admin.index');
+    });
 
 // ADMIN MENUS PAGE
 Route::prefix('admin')->name('admin.')->group(function () {

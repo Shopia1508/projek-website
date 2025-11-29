@@ -25,7 +25,7 @@
         <a href="{{ route('admin.menus') }}" class="menu-item"><i class="fa-solid fa-utensils"></i> Menus</a>
         <a href="{{route('admin.blog.index')}}" class="menu-item"><i class="fa-regular fa-envelope"></i> Blog</a>
         <a href="/admin/settings" class="menu-item"><i class="fa-solid fa-gear"></i> Settings</a>
-        <div class="menu-item logout" style="margin-top:60px;"><i>⏻</i> Logout</div>
+        <a href="{{ route('admin.logout') }}" class="menu-item logout" style="margin-top:60px;"><i>⏻</i> Logout</a>
     </div>
 
     <div class="main">

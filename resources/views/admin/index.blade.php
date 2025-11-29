@@ -3,7 +3,7 @@
 @section('content')
     <div class="main">
 
-        <div class="header">Welcome Back, Admin! </div>
+        <div class="header">Welcome Back, {{ Auth::guard('admin')->user()->name }} </div>
 
         <div class="top-section">
 
@@ -21,7 +21,7 @@
         </div>
 
     </div>
-    
+
 
     <script>
         flatpickr("#calendar", {
