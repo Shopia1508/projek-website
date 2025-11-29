@@ -27,17 +27,22 @@
             <td>{{ $menu->price }}</td>
             <td>
                 @if($menu->image)
-                    <img src="{{ asset('public/' . $menu->image) }}" class="menu-image">
+                    <img src="{{ asset('storage/' . $menu->image) }}" class="menu-image">
+
                 @endif
             </td>
-            <td>
+           <td>
+            <div class="btn-action">
                 <a href="{{ route('admin.menus.edit', $menu->id) }}" class="btn-edit">Edit</a>
-                <form action="{{ route('admin.menus.destroy', $menu->id) }}" method="POST" style="display:inline">
+
+                <form action="{{ route('admin.menus.destroy', $menu->id) }}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn-delete" onclick="return confirm('Yakin ingin hapus?')">Hapus</button>
                 </form>
-            </td>
+            </div>
+        </td>
+
         </tr>
         @endforeach
     </tbody>

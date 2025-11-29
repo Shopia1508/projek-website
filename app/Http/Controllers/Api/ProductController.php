@@ -22,19 +22,21 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'name' => 'required',
-            'category' => 'required',
-            'description' => 'nullable',
-            'price' => 'required|numeric',
-            'image' => 'nullable|string'
-        ]);
+    $validated = $request->validate([
+        'name' => 'required',
+        'category' => 'required',
+        'description' => 'nullable',
+        'price' => 'required|numeric',
+        'image' => 'nullable|image|mimes:jpg,jpeg,png|max:2048'
+    ]);
 
-        $product = Menus::create($validated);
-
-        return response()->json([
-            'message' => 'Produk berhasil ditambahkan!',
-            'data' => $product
-        ], 201);
+    if ($request->hasFile('image')) {
+        // SIMPAN GAMBAR KE STORAGE
+        $validated['image'] = $request->file('image')->store('menus', 'public');
     }
+
+    Menus::create($validated);
+
+    return redirect()->route('admin.menus.index');
+}
 }

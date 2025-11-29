@@ -48,7 +48,7 @@
         <div class="categories-container">
             <div class="categories-box">
                 <div class="imgBx">
-                    <img src="{{ asset('images/coffee.jpg') }}">
+                    <img src="{{ asset('images/hotchoco.jpg') }}">
                 </div>
                 <div class="categories-content">
                     <h3>Coffee</h3>
@@ -92,7 +92,7 @@
 
             <div class="categories-box">
                 <div class="imgBx">
-                    <img src="{{ asset('images/dessert.jpg') }}">
+                    <img src="{{ asset('images/ice-cream.jpg') }}">
                 </div>
                 <div class="categories-content">
                     <h3>Dessert</h3>
