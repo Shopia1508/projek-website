@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
 
     <label class="edit-form__label">
-        <span>Description</span>
-        <textarea name="description">{{ $blog->description }}</textarea>
+        <span>Content</span>
+        <textarea name="content">{{ $blog->content }}</textarea>
     </label>
 
     <label class="edit-form__label edit-form__file">
