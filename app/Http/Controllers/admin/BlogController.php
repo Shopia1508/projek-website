@@ -12,7 +12,7 @@ class BlogController extends Controller
     public function index()
     {
         $blogs = Blog::latest()->get();
-        return view('home', compact('blogs'));
+        return view('admin.blog.index', compact('blogs'));
     }
 
     public function create()

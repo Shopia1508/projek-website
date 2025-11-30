@@ -58,16 +58,16 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::delete('/menus/{id}', [MenuController::class, 'destroy'])->name('menus.destroy');
 });
 
-//Blog
 
+// Blog
 Route::prefix('admin')->name('admin.')->group(function () {
 
-    Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
-    Route::get('/blog/create', [BlogController::class, 'create'])->name('blog.create');
-    Route::post('/blog/store', [BlogController::class, 'store'])->name('blog.store');
-    Route::get('/blog/{id}/edit', [BlogController::class, 'edit'])->name('blog.edit');
-    Route::post('/blog/{id}/update', [BlogController::class, 'update'])->name('blog.update');
-    Route::delete('/blog/{id}', [BlogController::class, 'destroy'])->name('blog.destroy');
+    Route::get('/blog', [AdminBlog::class, 'index'])->name('blog.index');
+    Route::get('/blog/create', [AdminBlog::class, 'create'])->name('blog.create');
+    Route::post('/blog/store', [AdminBlog::class, 'store'])->name('blog.store');
+    Route::get('/blog/{id}/edit', [AdminBlog::class, 'edit'])->name('blog.edit');
+    Route::post('/blog/{id}/update', [AdminBlog::class, 'update'])->name('blog.update');
+    Route::delete('/blog/{id}', [AdminBlog::class, 'destroy'])->name('blog.destroy');
 
 });
 
