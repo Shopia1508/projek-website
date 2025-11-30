@@ -22,19 +22,27 @@
         <tr>
             <td>
                 @if($blog->image)
-                    <img src="{{ asset('public/' . $blog->image) }}" class="blog-image">
+                    <img src="{{ asset('storage/' . $blog->image) }}" 
+                         class="blog-image"
+                         style="width:120px; border-radius:8px;">
                 @endif
             </td>
+
             <td>{{ $blog->content }}</td>
-            <td>
+
+           <td>
+            <div class="btn-action">
                 <a href="{{ route('admin.blog.edit', $blog->id) }}" class="btn-edit">Edit</a>
 
-                <form action="{{ route('admin.blog.destroy', $blog->id) }}" method="POST" style="display:inline">
+                <form action="{{ route('admin.blog.destroy', $blog->id) }}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn-delete">Hapus</button>
                 </form>
-            </td>
+            </div>
+        </td>
+
+
         </tr>
         @endforeach
     </tbody>
