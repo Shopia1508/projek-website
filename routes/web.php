@@ -66,7 +66,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/blog/create', [AdminBlog::class, 'create'])->name('blog.create');
     Route::post('/blog/store', [AdminBlog::class, 'store'])->name('blog.store');
     Route::get('/blog/{id}/edit', [AdminBlog::class, 'edit'])->name('blog.edit');
-    Route::post('/blog/{id}/update', [AdminBlog::class, 'update'])->name('blog.update');
+    Route::put('/blog/{id}/update', [AdminBlog::class, 'update'])->name('blog.update');
     Route::delete('/blog/{id}', [AdminBlog::class, 'destroy'])->name('blog.destroy');
 
 });
