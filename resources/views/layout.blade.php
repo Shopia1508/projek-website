@@ -25,35 +25,44 @@
 </head>
 <body>
 
-   <!-- Navbar -->
-   <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="{{ route('home') }}">
-          Coffeé.
-        </a> 
   
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+      <!-- LOGO -->
+      <a class="navbar-brand" href="{{ route('home') }}">
+        Coffeé.
+      </a>
   
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('about') }}">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('products') }}">Menu</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('location') }}">Location</a>
-                </li>
-            </ul>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- MENU DALAM KOTAK -->
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <div class="nav-center-box">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="{{ route('home') }}">Home</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('about') }}">About</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('products') }}">Menu</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('location') }}">Location</a>
+            </li>
+          </ul>
         </div>
+      </div>
+  
     </div>
   </nav>
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   
