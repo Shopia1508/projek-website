@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\ControllerOrder;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MenuController;
@@ -26,10 +25,6 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
-// ORDER
-Route::get('/order', [ControllerOrder::class, 'create'])->name('order');
-Route::post('/order', [ControllerOrder::class, 'store'])->name('order');
-Route::post('/order/create-form-cart', [ControllerOrder::class, 'createFormCart'])->name('order.createFromCart');
 
 // ADMIN LOGIN
 Route::get('/admin-login', [LoginController::class, 'showAdminLogin'])->name('admin.login');
